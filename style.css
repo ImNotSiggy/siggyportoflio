@@ -232,10 +232,10 @@ span{
         content: "Web Designer";
     }
     41%, 60%{
-        content: "Lyric Writter";
+        content: "Musician";
     }
     61%, 80%{
-        content: "Musician";
+        content: "Graphics Designer and Editor";
     }
     81%, 100%{
         content: "Videographer/Photographer";
@@ -659,9 +659,10 @@ button.success {
     width: 24px;
     height: 24px;
     background-color: #b74b4b;
-    border-radius: 50%;
-    box-shadow: 0 0 20px #b74b4b;
+    border-radius: 50% solid #000;
+    box-shadow: 0 0 10px #b74b4b;
     border: 4px solid #0c0c0c;
+    z-index: 2;
 }
 
 .exp-header {
@@ -712,4 +713,24 @@ button.success {
     left: 0;
     color: #b74b4b;
     font-weight: bold;
+}
+
+/* Container that maintains a clean video aspect ratio (16:9) */
+.project-card .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Creates a 16:9 aspect ratio space */
+    height: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+/* Forces the embedded video iframe to fill the container perfectly */
+.project-card .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
